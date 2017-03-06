@@ -1,0 +1,171 @@
+#todo_lists{
+    background-color: #efefef;
+    padding: 30px 10px;
+    width:500px;
+    height: 500px;
+    position: relative;
+}
+#list_wrap{
+    padding:0;
+    list-style:none;
+    position: relative;
+}
+.list{
+    cursor: pointer;
+    background-color:#eee;
+    border-bottom: 1px solid #fefefe;
+    width:200px;
+}
+.list:first-child {
+    border-top:1px solid #fefefe;
+}
+.list:hover{
+    background-color:#dfdfdf;
+}
+.list.active > .todo_list{
+    visibility: visible;
+}
+.list.active{
+    display: block;
+    background: #cfcfcf;
+}
+.active > p {
+    cursor: text;
+}
+
+.todo_list {
+    visibility: hidden;
+    position: absolute;
+    left: 200px;
+    top: -5px;
+    background-color: #fff;
+    list-style: none;
+    padding: 0;
+    overflow-y: scroll;
+    height: 500px;
+    width: 300px;
+    /* border: 1px solid; */
+}
+
+.todo_list li {
+    border-bottom: 1px solid #eee;
+    margin: 5px 5px 0 5px;
+    padding: 11px 8px 0 8px;
+    height: 28px;
+}
+
+.todo_list li:last-child {
+    border-bottom: none;
+}
+
+p {
+    margin: 5px;
+    padding: 8px;
+    display: inline-block;
+
+}
+button{
+    -webkit-appearance: none;
+    border-radius: 5px;
+    border: 1px solid #eee;
+    box-shadow: 1px 1px 1px #ddd;
+    padding: 5px;
+    background-color: #fff;
+    cursor: pointer;
+    line-height: 0;
+}
+
+button:active{
+    border: 1px solid #ddd;
+    box-shadow: 1px 1px 1px #aaa;
+    background-color: #fff;
+}
+button:focus{
+    outline: none;
+}
+.todo_list p{
+    margin:0;
+    padding:0;
+    width: 253px;
+    position:relative;
+    height: 28px;
+
+}
+
+.todo_list .active{
+    background-color: #eeeeee;
+   }
+#add_item {
+    border-radius: 20px;
+    height:20px;
+    position: absolute;
+    top:0;
+    right:0;
+    margin: 8px;
+}
+.done_button{
+    display: inline;
+    vertical-align: super;
+    margin: 0 9px 0 0;
+}
+.hide_done .done{
+    animation-name:hideDone;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+}
+.done_button:active, .done > .done_button {
+    background-color: rgb(99, 177, 255);
+    box-shadow: 1px 1px 1px #62b0ff;
+    border-color: #61c5ff;
+}
+#add_list{
+    height: 20px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin:8px;
+}
+
+ul#list_wrap::after {
+    clear:both;
+    content:'';
+    display: block;
+}
+.hide {
+    display: none;
+}
+li.toggle_done_wrap{
+    padding: 0;
+    margin: 0;
+    height: 50px;
+}
+.toggle_done{
+    width: 96%;
+    height: 75%;
+    margin: 2%;
+}
+.finish_date{
+    font-size: 10px;
+    right:0;
+    position: absolute;
+    bottom: 0;
+    color: red;
+}
+
+@keyframes hideDone {
+    0% {
+        height: 28px;
+    }
+    50%{
+        opacity: 0;
+        visibility: hidden;
+    }
+    100% {
+        height: 0;
+        margin:0;
+        padding:0;
+        visibility: hidden;
+
+    }
+}

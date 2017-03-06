@@ -3,10 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <title>Advanced Part 1</title>
-    <script href="jquery-3.1.1.min.js" type="text/javascript"></script>
-    <link href="style.css" type="text/css">
+    <link  rel="stylesheet" href="style.css" type="text/css">
+
+    <script src="jquery-3.1.1.min.js" type="text/javascript"></script>
+    <script src="script.js" type="text/javascript"></script>
 </head>
 <body>
-
+<h1>Todo Lists</h1>
+<div id="todo_lists">
+    <ul id="list_wrap">
+        <li class="list active">
+            <p>TODO List todo:</p>
+            <ul class="todo_list hide_done">
+                <li class="toggle_done_wrap"><button class="toggle_done">Toggle Done</button></li>
+                <li class="done"><button type="button" class="done_button"></button><p>Delete lists on delete key<span class="finish_date">Mon Mar 06 2017</span></p></li>
+                <li class="done"><button type="button" class="done_button"></button><p>Truncate too long list titles<span class="finish_date">Mon Mar 06 2017</span></p></li>
+                <li class="done"><button type="button" class="done_button"></button><p>Add animations<span class="finish_date">Mon Mar 06 2017</span></p></li>
+                <li class="done"><button type="button" class="done_button"></button><p>Un-mark done, remove date<span class="finish_date">Mon Mar 06 2017</span></p></li>
+                <li class="done"><button type="button" class="done_button"></button><p>Prevent duplicate date stamps<span class="finish_date">Mon Mar 06 2017</span></p></li>
+                <li><button type="button" class="done_button"></button><p>Add local storage</p></li>
+            </ul>
+        </li>
+        <li class="list">
+            <p>Features</p>
+            <ul class="todo_list hide_done">
+                <li class="toggle_done_wrap">
+                    <button class="toggle_done">Toggle Done</button></li>
+                <li>
+                    <button type="button" class="done_button"></button><p>Add a new list</p>
+                </li>
+                <li>
+                    <button type="button" class="done_button"></button><p>Edit list title</p></li>
+                <li>
+                    <button type="button" class="done_button"></button><p>Add a new item</p></li>
+                <li>
+                    <button type="button" class="done_button"></button><p>Edit item title</p></li>
+                <li>
+                    <button type="button" class="done_button"></button><p>Mark as done</p></li>
+                <li>
+                    <button type="button" class="done_button"></button><p>Hide / show done list items</p></li>
+                <li>
+                    <button type="button" class="done_button"></button><p>Delete items with delete key</p></li>
+                <li>
+                    <button type="button" class="done_button"></button><p>Delete lists with delete key</p></li>
+                <li>
+                    <button type="button" class="done_button"></button><p>View date and item was finished</p></li>
+            </ul>
+        </li>
+    </ul>
+    <button id="add_item">+</button>
+    <button type="button" id="add_list">Add list +</button>
+</div>
+<script>
+</script>
 </body>
 </html>
